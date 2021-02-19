@@ -10,13 +10,14 @@ import com.optum.api.patient.models.PatientInformation;
 import com.optum.api.patient.services.PatientService;
 
 @RestController
-public class PatientInformationController {
+public class PatientInformationController  {
 	
 	@Autowired
-	private PatientService patientservice;
+	private PatientService patientservice; //(capitalone)
 	
 	@GetMapping("/api/patients")
 	public List<PatientInformation> getPatientInformation(){
+		
 		return patientservice.getPatientInformation();
 	}
 }
